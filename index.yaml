@@ -3,7 +3,7 @@ entries:
   dino-octopus-aks:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-03-20T12:07:22.5019406-05:00"
+    created: "2020-03-20T13:23:47.4318164-05:00"
     description: A Helm chart for Kubernetes
     digest: b088733eaadb4793ef4e3415234f75373418c4da1896cc5cba97607f9b2902c6
     name: dino-octopus-aks
@@ -11,4 +11,4 @@ entries:
     urls:
     - charts/dino-octopus-aks-0.1.0.tgz
     version: 0.1.0
-generated: "2020-03-20T12:07:22.5009385-05:00"
+generated: "2020-03-20T13:23:47.4238432-05:00"
