@@ -1,45 +1,45 @@
 web:
     name: dino-octopus
 
-dino-octopus:
+dinoOctopus:
     name: dino-octopus
     image:
-        repo: dirm/dino-octopus
+        repo: toadvineacr.azurecr.io/dino-octopus
         tag: latest
     containerPort: 80
-dino-octopus-recipe:
+dinoOctopusRecipe:
     name: dino-octopus-recipe
     image:
-        repo: dirm/dino-octopus
+        repo: toadvineacr.azurecr.io/dino-octopus-recipe
         tag: latest
     containerPort: 80
-dino-octopus-product:
+dinoOctopusProduct:
     name: dino-octopus-product
     image:
-        repo: dirm/dino-octopus-product
+        repo: toadvineacr.azurecr.io/dino-octopus-product
         tag: latest
     containerPort: 80
-dino-octopus-product-search:
+dinoOctopusProductSearch:
     name: dino-octopus-product-search
     image:
-        repo: dirm/dino-octopus-product-search
+        repo: toadvineacr.azurecr.io/dino-octopus-product-search
         tag: latest
     containerPort: 80
-dino-octopus-plated:
+dinoOctopusPlated:
     name: dino-octopus-plated
     image:
-        repo: dirm/dino-octopus-plated
+        repo: toadvineacr.azurecr.io/dino-octopus-plated
         tag: latest
     containerPort: 80
-dino-octopus-plated-console:
+dinoOctopusPlatedConsole:
     name: dino-octopus-plated-console
     image:
-        repo: dirm/dino-octopus-plated-console
+        repo: toadvineacr.azurecr.io/dino-octopus-plated-console
         tag: latest
     containerPort: 80
-dino-octopus-meredith-console:
+dinoOctopusMeredithConsole:
     name: dino-octopus-meredith-console
     image:
-        repo: dirm/dino-octopus-meredith-console
+        repo: toadvineacr.azurecr.io/dino-octopus-meredith-console
         tag: latest
     containerPort: 80

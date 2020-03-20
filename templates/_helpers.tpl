@@ -50,14 +50,3 @@ Selector labels
 app.kubernetes.io/name: {{ include "dino-octopus-aks.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
-
-{{/*
-Create the name of the service account to use
-*/}}
-{{- define "dino-octopus-aks.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create -}}
-    {{ default (include "dino-octopus-aks.fullname" .) .Values.serviceAccount.name }}
-{{- else -}}
-    {{ default "default" .Values.serviceAccount.name }}
-{{- end -}}
-{{- end -}}

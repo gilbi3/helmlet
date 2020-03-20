@@ -18,14 +18,12 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-      serviceAccountName: {{ include "dino-octopus-aks.serviceAccountName" . }}
-      securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      
       containers:
-        - name: {{ .Values.dino-octopus.name }}
+        - name: {{ .Values.dinoOctopus.name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.dino-octopus.image.repo }}:{{ .Chart.AppVersion }}"
+          image: "{{ .Values.dinoOctopus.image.repo }}:{{ .Chart.AppVersion }}"
           ports:
             - name: http
               containerPort: 80
@@ -40,10 +38,10 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-        - name: {{ .Values.dino-octopus-recipe.name }}
+        - name: {{ .Values.dinoOctopusRecipe.name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.dino-ocotpus-recipe.image.repo }}:{{ .Chart.AppVersion }}"
+          image: "{{ .Values.dinoOctopusRecipe.image.repo }}:{{ .Chart.AppVersion }}"
           ports:
             - name: http
               containerPort: 80
@@ -58,11 +56,10 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-        - name: {{ .Values.dino-octopus-product.name }}
+        - name: {{ .Values.dinoOctopusProduct.name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.dino-octopus-product.image.repo }}:{{ .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.dinoOctopusProduct.image.repo }}:{{ .Chart.AppVersion }}"
           ports:
             - name: http
               containerPort: 80
@@ -77,11 +74,10 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-        - name: {{ .Values.dino-octopus-product-search.name }}
+        - name: {{ .Values.dinoOctopusProductSearch.name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.octopus-product-search.image.repo }}:{{ .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.dinoOctopusProductSearch.image.repo }}:{{ .Chart.AppVersion }}"
           ports:
             - name: http
               containerPort: 80
@@ -96,11 +92,10 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-        - name: {{ .Values.dino-octopus-plated.name }}
+        - name: {{ .Values.dinoOctopusPlated.name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.dino-octopus-plated.image.repo }}:{{ .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.dinoOctopusPlated.image.repo }}:{{ .Chart.AppVersion }}"
           ports:
             - name: http
               containerPort: 80
@@ -115,10 +110,10 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-        - name: {{ .Values.dino-octopus-plated-console.name }}
+        - name: {{ .Values.dinoOctopusPlatedConsole.name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.dino-octopus-plated-console.image.repo }}:{{ .Chart.AppVersion }}"
+          image: "{{ .Values.dinoOctopusPlatedConsole.image.repo }}:{{ .Chart.AppVersion }}"
           ports:
             - name: http
               containerPort: 80
@@ -133,10 +128,10 @@ spec:
               port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-        - name: {{ .Values.dino-octopus-meredith-console.name }}
+        - name: {{ .Values.dinoOctopusMeredithConsole.name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.dino-octopus-meredith-console.image.repo }}:{{ .Chart.AppVersion }}"
+          image: "{{ .Values.dinoOctopusMeredithConsole.image.repo }}:{{ .Chart.AppVersion }}"
           ports:
             - name: http
               containerPort: 80
